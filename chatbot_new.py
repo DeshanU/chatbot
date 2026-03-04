@@ -15,7 +15,7 @@ from transformers import pipeline
 from langchain_community.llms import HuggingFacePipeline
 
 # Question answering chain
-from langchain_community.chains import RetrievalQA
+from langchain.chains import RetrievalQA
 
 
 # ----------------------------
@@ -86,7 +86,8 @@ if file:
 
         # Create LLM
         pipe = pipeline(
-            "text2text-generation",
+            # "text2text-generation",
+            "text-generation",
             model="google/flan-t5-small"
         )
 
